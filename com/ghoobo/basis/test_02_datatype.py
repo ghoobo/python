@@ -20,6 +20,26 @@ class test_datatype(unittest.TestCase):
         # 删除a的引用
         del a
 
+    def test_str(self):
+        str1 = "guohaobo is so handsome!"
+        str2 = '''abcdefg'''
+        str3 = 'abcdefg'
+        print(str1)
+        # 输出第一个字符
+        print(str1[0])
+        # 输出第一个到倒数第二个的所有字符
+        print(str1[0:-1])
+        # 输出第三个字符开始的所有字符
+        print(str1[2:])
+        # 输出从第二个开始到第五个且每隔两个的字符
+        print(str1[1:5:2])
+        # 以下用于反转字符串
+        print(str1[-1::-1])
+        # 连续输出字符串2次
+        print(str1 * 2)
+        # 连接字符串
+        print("str1 is : " + str1)
+
     def test_list(self):
         list = [ 'abcd', 786 , 2.23, 'runoob', 70.2 ]
         tinylist = [123, 'runoob']
@@ -71,7 +91,7 @@ class test_datatype(unittest.TestCase):
         # 连接元组
         print (tuple + tinytuple)
 
-    def test_Set(self):
+    def test_set(self):
         # 集合（其实就是Set）
         sites = {'Google', 'Taobao', 'Ghoobo', 'Facebook', 'Zhihu', 'Baidu'}
         # 输出集合，重复的元素被自动去掉
@@ -100,7 +120,7 @@ class test_datatype(unittest.TestCase):
         # a 和 b 中不同时存在的元素
         print(a ^ b)
 
-    def test_Dictionary(self):
+    def test_dictionary(self):
         # Dictionary(其实就是Map，关键字其实就是key)
         ghoobo1 = {} # 定义一个空字典
         ghoobo1["name"] = "郭浩博"
